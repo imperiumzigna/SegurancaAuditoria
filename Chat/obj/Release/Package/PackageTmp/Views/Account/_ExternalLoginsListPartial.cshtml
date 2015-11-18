@@ -1,0 +1,32 @@
+﻿@model ICollection<AuthenticationClientData>
+
+@if (Model.Count == 0)
+{
+    <div class="message-info">
+        <p>Nenhum serviço instalado.</p>
+    </div>
+}
+else
+{
+    using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+    @Html.AntiForgeryToken()
+    <fieldset id="socialLoginList">
+        <legend>Logon usando outro serviço</legend>
+        <p>
+        @foreach (AuthenticationClientData p in Model)
+{
+    if (@p.DisplayName == "Facebook")
+    {
+        <button class="btn btn-" type="submit" name="provider" value="@p.AuthenticationClient.ProviderName" title="Logon usando sua conta @p.DisplayName"><i class="fa fa-facebook-official"></i> @p.DisplayName</button>
+    }
+    else
+    {
+
+            <button class="btn btn-default" type="submit" name="provider" value="@p.AuthenticationClient.ProviderName" title="Logon usando sua conta @p.DisplayName">@p.DisplayName</button>
+            }
+        }
+        </p>
+    </fieldset>
+    }
+}

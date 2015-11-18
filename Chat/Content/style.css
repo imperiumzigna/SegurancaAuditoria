@@ -1,0 +1,139 @@
+fieldset {
+border:0px;
+}
+
+.telaBatePapo {
+width: 960px;
+margin: 0 auto; 
+}
+body {
+	background-color: #ffeb3b ;
+}
+/*------------------INDEX-------------------*/
+#logo {
+    margin: 0 auto 0 auto;
+    width: 300px;
+    margin-top: 50px;
+    padding-left: 80px;
+   
+}
+#facebook {
+background-color:rgb(59,89,152);
+}
+
+.botoes {
+margin: 0 auto;
+width: 500px;
+margin-top: 50px;
+
+}
+
+.page-footer {
+margin-top: 60px;
+flex: 1 0 auto;
+}
+/*-------------------------------Login e Cadastro---------------------*/
+
+.material-icons{
+	margin-left: 10px;
+	margin-top: 25px;
+	width: 10px;
+}
+#logo-bla {
+	 margin: 0 auto 0 auto;
+    width: 300px;
+    margin-top: 50px;
+    padding-left: 80px;
+
+}
+.quadrado {
+background-color: white;
+width: 500px;
+margin: 0 auto;
+margin-top: 100px;
+box-shadow: 1px 1px  5px; 
+padding-top: 50px;
+}
+
+.row {
+padding-left: 10px;
+margin-bottom: 10px;
+}
+.botoes-login {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+/*-----------------nhem-------------------*/
+
+.retangulo {
+background-color: white;
+width: 1000px;
+height: 500px;
+margin: 0 auto;
+margin-top: 60px;
+box-shadow: 1px 1px  5px;
+float: left; 
+}
+.retangulo1 {
+
+    width: 300px;
+    height: 500px;
+    float: left;
+    border-right: 1px solid #ECDADA;  
+
+}
+.retangulo2 {
+	
+	width: 700px;
+	height: 500px;
+	float: left; 
+
+}
+
+.conversaHeader{
+height: 40px;
+width: 700px;
+border-bottom: 1px solid #ECDADA;
+text-align: center;
+background-color: #f1f8e9;
+margin-top: 1px;
+}
+#conversas{
+height: 375px;
+width: 700px;
+border-bottom: 1px solid #ECDADA;
+text-align: center;
+}
+
+.janelaConteudo{
+padding: 10px;
+height: 70px;
+width: 700px;
+text-align: center;
+background-color: #f1f8e9;
+}
+
+#conteudo{
+	border: 1px solid #ECDADA;
+	width: 500px;
+	background-color: white;
+   float: left;
+}
+
+button {
+	
+	float: right;
+	padding-right: 100px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+

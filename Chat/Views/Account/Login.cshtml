@@ -1,0 +1,47 @@
+﻿@model Chat.Models.LoginModel
+
+@{
+    ViewBag.Title = "Entrar";
+}
+<div class="quadrado">
+    <section id="loginForm">
+
+        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+
+                <div class="row teste2">
+                    <i class="material-icons left" class="centered">perm_identity</i>
+                    <div class="input-field col s11 teste2">
+                        
+                        @Html.TextBoxFor(m => m.UserName, new { placeholder= "Nome de usuário"})
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                </div>
+                <div class="row">
+                    <i class="material-icons left centered">vpn_key</i>
+                    <div class="input-field col s11">
+                        
+                        @Html.PasswordFor(m => m.Password, new { placeholder="Senha"})
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+                </div>
+
+                <div class="botoes-login center-align">
+                    <input class="waves-effect waves-light btn btn-registrar  grey darken-3" type="submit" value="Entrar" />
+                </div>
+            </fieldset>
+        }
+        <div class="social" id="socialLoginForm">
+            @Html.Action("ExternalLoginsList", "Account", new { ReturnUrl = ViewBag.ReturnUrl })
+        </div>
+    </section>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

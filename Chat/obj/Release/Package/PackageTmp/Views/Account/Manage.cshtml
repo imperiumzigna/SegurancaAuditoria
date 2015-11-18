@@ -1,0 +1,29 @@
+﻿@model Chat.Models.LocalPasswordModel
+@{
+    ViewBag.Title = "Gerenciar conta";
+}
+
+<p class="message-success">@ViewBag.StatusMessage</p>
+
+
+<div class="message-info">Nome da conta: <b>@User.Identity.Name</b></div>
+
+@if (ViewBag.HasLocalPassword)
+{
+    @Html.Partial("_ChangePasswordPartial")
+}
+else
+{ 
+    @Html.Partial("_SetPasswordPartial")
+}
+
+<section id="externalLogins">
+    @Html.Action("RemoveExternalLogins")
+
+    <h3>Você também pode entrar usando:</h3>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
