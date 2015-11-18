@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebApi.OData.pt-br</id>
+    <version>4.0.30506</version>
+    <title>Recursos em Português-BR para o Microsoft ASP.NET Web API OData</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnet_and_web_tools_2012_2_RTW_EULA_PTB.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Este pacote contém os assemblies satélites para o ASP.NET Web API OData.</description>
+    <summary>Recursos em Português-BR  para o pacote Microsoft.AspNet.WebApi.OData</summary>
+    <releaseNotes />
+    <copyright />
+    <language>pt-br</language>
+    <tags>Microsoft AspNet WebApi AspNetWebApi OData</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.OData" version="[4.0.30506]" />
+    </dependencies>
+  </metadata>
+</package>

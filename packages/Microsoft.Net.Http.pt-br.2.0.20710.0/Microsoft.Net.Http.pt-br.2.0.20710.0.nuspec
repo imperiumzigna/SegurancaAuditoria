@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Net.Http.pt-br</id>
+    <version>2.0.20710.0</version>
+    <title>Recursos em português do Microsoft .NET Framework 4 HTTP Client Libraries</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_ptb.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Este pacote contém os assemblies satélite em português para as Microsoft .NET Framework 4 HTTP Client Libraries.</description>
+    <summary>Recursos em português para o pacote do Microsoft.Net.Http</summary>
+    <language>pt-br</language>
+    <dependencies>
+      <dependency id="Microsoft.Net.Http" version="[2.0.20710.0]" />
+    </dependencies>
+  </metadata>
+</package>

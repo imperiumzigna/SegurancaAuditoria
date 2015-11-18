@@ -9,7 +9,7 @@ using Chat.Models;
 namespace Chat.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
-    public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute
+    public sealed class InitializeSimpleMembershipAttribute 
     {
         private static SimpleMembershipInitializer _initializer;
         private static object _initializerLock = new object();

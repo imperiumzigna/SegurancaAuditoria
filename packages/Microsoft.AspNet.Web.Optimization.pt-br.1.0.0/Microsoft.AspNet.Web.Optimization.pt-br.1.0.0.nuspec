@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Web.Optimization.pt-br</id>
+    <version>1.0.0</version>
+    <title>Recursos Português-BR do Microsoft ASP.NET Web Optimization</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/weboptimization_1_eula_PTB.htm</licenseUrl>
+    <iconUrl>https://download-codeplex.sec.s-msft.com/Download?ProjectName=aspnetwebstack&amp;DownloadId=360555</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Este pacote contém os assemblies satélite Português-BR para ASP.NET Web Optimization.</description>
+    <summary>Recursos Português-BR do pacote Microsoft.AspNet.Web.Optimization</summary>
+    <releaseNotes />
+    <copyright />
+    <language>pt-br</language>
+    <tags>Microsoft AspNet optimization bundling minification</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="[1.0.0]" />
+    </dependencies>
+  </metadata>
+</package>

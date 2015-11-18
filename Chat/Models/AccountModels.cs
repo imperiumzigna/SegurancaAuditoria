@@ -50,13 +50,12 @@ namespace Chat.Models
         public virtual List<Mensagem> Mensagens { get; set; }
         public virtual List<Conversa> Conversas { get; set; }
         // Diz se o usuário está logado
-        //public DateTime Logado { get; set; }
+        public DateTime Logado { get; set; }
         public Usuario()
         {
             Mensagens = new List<Mensagem>();
             Conversas = new List<Conversa>();
-        
-            
+            Logado = DateTime.MinValue;
         }
     }
 

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebPages.OAuth.pt-br</id>
+    <version>2.0.30506.0</version>
+    <title>Recursos Português-BR da Biblioteca do Microsoft WebPages OAuth</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/WebPages_2_eula_PTB.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-pages</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Este pacote contém os assemblies satélite em português para o ASP.NET Web Pages OAuth.</description>
+    <summary>Recursos em português para o pacote do Microsoft.AspNet.WebPages.OAuth</summary>
+    <releaseNotes />
+    <copyright />
+    <language>pt-br</language>
+    <tags>Microsoft AspNet WebPages AspNetWebPages OpenId OAuth authentication</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebPages.OAuth" version="[2.0.30506.0]" />
+    </dependencies>
+  </metadata>
+</package>

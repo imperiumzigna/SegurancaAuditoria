@@ -67,10 +67,21 @@ namespace Chat.Controllers
             object json = eu.Mensagens.Select(x => new MensagemJson(x.MensagemId, x.GetAutor(User.Identity.Name), x.Conversa.GetNomeConversa(eu.UsuarioNome), x.Conteudo, new DateTime(x.Hora).ToString("hh:mm dd/MM/yyyy"))).ToList();
 
             //Descomentar essa linha para limpar histórico
-          eu.Mensagens.Clear();
+            eu.Mensagens.Clear();
 
             db.SaveChanges();
             return Json(json, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult Logados() {
+            if(!User.Identity.IsAuthenticated){
+            return HttpNotFound();
+            }
+            //Usuario eu = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == User.Identity.Name);
+            IEnumerable<Usuario> logados = db.Usuarios.Where(x=> (DateTime.Now - x.Logado).Minutes < 1);
+            object json = logados.Select(x => new Logados(x.UsuarioNome));
+            return Json(json,JsonRequestBehavior.AllowGet);
+        }
     }
+
 }

@@ -120,6 +120,17 @@ namespace Chat.Models
         }
     }
 
+    [DataContract]
+    public class Logados {
+        [DataMember]
+        public string Nome { get; set; }
+
+        public Logados(string nome)
+        {
+            Nome = nome;
+        }
+    }
+
     //[DataContract]
     //public class ConversaJson
     //{
