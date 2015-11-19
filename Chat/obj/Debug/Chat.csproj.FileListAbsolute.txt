@@ -315,6 +315,6 @@ C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\bin\ko\S
 C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\bin\ru\System.Spatial.resources.dll
 C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
 C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\obj\Debug\Chat.dll
 C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\obj\Debug\Chat.pdb
+C:\Users\igora.DESKTOP-F01IHLE\Documents\GitHub\SegurancaAuditoria\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache

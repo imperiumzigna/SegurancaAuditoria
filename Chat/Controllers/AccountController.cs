@@ -11,12 +11,15 @@ using WebMatrix.WebData;
 using Chat.Filters;
 using Chat.Models;
 
+
+
 namespace Chat.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]
-    public class AccountController : Controller
+     public class AccountController : Controller
     {
+           
         //
         // GET: /Account/Login
 

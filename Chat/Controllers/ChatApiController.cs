@@ -12,8 +12,6 @@ namespace Chat.Controllers
     public class ChatApiController : Controller
     {
         UsersContext db = new UsersContext();
-
-
         //Envia uma mensagem para um usuário
         [HttpPost]
         public ActionResult Send(string conv, string mensagem)
@@ -58,8 +56,16 @@ namespace Chat.Controllers
             return new HttpStatusCodeResult(200);
         }
 
-
-        //Recebe novas mensagens do usuário logado (em formato JSON)
+        public ActionResult Logados() {
+            if(!User.Identity.IsAuthenticated){
+            return HttpNotFound();
+            }
+            //Usuario eu = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == User.Identity.Name);
+            IEnumerable<Usuario> logados = db.Usuarios.Where(x=> (DateTime.Now - x.Logado).Minutes < 1);
+            object json = logados.Select(x => new Logados(x.UsuarioNome));
+            return Json(json,JsonRequestBehavior.AllowGet);
+        }
+            //Recebe novas mensagens do usuário logado (em formato JSON)
         public ActionResult Receive()
         {
             Usuario eu = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == User.Identity.Name);
@@ -73,15 +79,6 @@ namespace Chat.Controllers
             return Json(json, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult Logados() {
-            if(!User.Identity.IsAuthenticated){
-            return HttpNotFound();
-            }
-            //Usuario eu = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == User.Identity.Name);
-            IEnumerable<Usuario> logados = db.Usuarios.Where(x=> (DateTime.Now - x.Logado).Minutes < 1);
-            object json = logados.Select(x => new Logados(x.UsuarioNome));
-            return Json(json,JsonRequestBehavior.AllowGet);
-        }
-    }
 
+    }
 }

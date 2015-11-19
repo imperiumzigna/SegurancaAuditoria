@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="Chat-Web.config Connection String" description="Chat Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=Chat;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\Chat.mdf" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\igora\.DESKTOP-F01IHLE\\Documents\\GitHub\\Chat\\Back\ End\\Chat\\Chat\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Chat']/@connectionString" />
-  </parameter>
-</parameters>

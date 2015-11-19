@@ -37,7 +37,7 @@ namespace Chat.Models
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Conversa> Conversas { get; set; }
         public DbSet<Mensagem> Mensagens { get; set; }
-
+        
     }
 
     [Table("Usuarios")]

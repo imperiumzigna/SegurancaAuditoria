@@ -3,24 +3,38 @@
 }
 
 
-<div class="container" id="conversas">
+<div class="telaBatePapo">
 
-</div>
+    <div class="retangulo">
+        <div class="retangulo1">
+            <h2 class="center-align">Conversas</h2>
 
-<div class="container" id="conteudo">
+        </div>
+        <div class="retangulo2">
+            <div class="conversaHeader">
+                <p>Fulano</p>
+            </div>
 
-</div>
-<div class="row">
-    <div class="col">
-        <input id="mensagem" placeholder="Mensagem" type="text" autocomplete="off" />
-        <button id="enviar" class="btn"><i class="fa fa-paper-plane fa-2x"></i> Enviar</button>
+            <div id="conversas">
+                
+            </div>
+
+            <div class="janelaConteudo">
+
+                <form>
+                    <button id="enviar_btn" class="btn btn-enviar waves-effect waves-light" type="submit" name="action">
+                        Enviar
+                        <i class="material-icons right ">send</i>
+                    </button>
+
+                    <input id="conteudo" type="text" class="validate">
+                </form>
+            </div>
+        </div>
     </div>
+    
 </div>
 
-<div class="row">
-    <div>Lista de Usuários</div>
-          
-</div>
 
 @section ChatJs{
     @Scripts.Render("~/bundles/chat")

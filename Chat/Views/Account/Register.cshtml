@@ -2,31 +2,34 @@
 @{
     ViewBag.Title = "Nova conta";
 }
-<div class="quadrado">
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary()
+<div class="telaBatePapo">
+    <div class="quadrado">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
 
-        <fieldset>
-
-            <ol>
-                <li>
-                    @Html.LabelFor(m => m.UserName)
-                    @Html.TextBoxFor(m => m.UserName)
-                </li>
-                <li>
-                    @Html.LabelFor(m => m.Password)
-                    @Html.PasswordFor(m => m.Password)
-                </li>
-                <li>
-                    @Html.LabelFor(m => m.ConfirmPassword)
-                    @Html.PasswordFor(m => m.ConfirmPassword)
-                </li>
-            </ol>
-            <input type="submit" value="Criar" />
-        </fieldset>
-    }
+            <fieldset class="col s12">
+                <div class="row">
+                    <i class="material-icons left" class="centered">perm_identity</i>
+                    <div class="col s11">
+                    @Html.TextBoxFor(m => m.UserName, new { placeholder = "Nome de Usuário" })
+                    </div>
+<i class="material-icons left" class="centered">vpn_key</i>
+                    <div class="col s11">
+                        @Html.PasswordFor(m => m.Password, new { placeholder = "Senha" })
+                    </div>
+<i class="material-icons left" class="centered">vpn_key</i>
+                    <div class ="col s11">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = "Confirmar Senha" })
+                    </div>
+                    <div class="col s11">
+                        <button type="submit" value="Criar" id="registrar" class="waves-effect waves-light btn btn-registrar  grey darken-3"> Registrar</button>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

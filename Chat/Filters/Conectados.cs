@@ -13,16 +13,18 @@ namespace Chat.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            // 
-           if(filterContext.HttpContext.Request.IsAuthenticated){
-               UsersContext db = new UsersContext();
+            // Necessário ajeitar, exceções não tratadas
+        //    if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+        //    {
+        //        UsersContext db = new UsersContext();
 
-               Usuario user = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == filterContext.HttpContext.User.Identity.Name);
-               if(user != null){
-                   user.Logado = DateTime.Now;
-                   db.SaveChanges();
-               }
-           }
+        //        Usuario user = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == filterContext.HttpContext.User.Identity.Name);
+        //        if (user != null)
+        //        {
+        //            user.Logado = DateTime.Now;
+        //            db.SaveChanges();
+        //        }
+        //    }
 
         }
     }
