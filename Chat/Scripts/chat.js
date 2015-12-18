@@ -24,16 +24,12 @@ var recebeMensagens = function () {
 };
 
 
-$("#enviar_btn").submit(function(){
-    $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: 'http://localhost:49172/ChatApi/Send?',
-        data: {
-            user:"igor",
-                msg:$("#conteudo").val()
-        }
-    })
+$("#enviar_btn").click(function(){
+    $.post('/ChatApi/Send',"conv="+ "igor" +"&"+"mensagem="+ $("#conteudo").val()
+        
+    );
+
+    recebeMensagens();
     console.log($("#conteudo").val());
 })
     

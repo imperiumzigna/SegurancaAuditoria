@@ -61,7 +61,7 @@ namespace Chat.Controllers
             return HttpNotFound();
             }
             //Usuario eu = db.Usuarios.FirstOrDefault(x => x.UsuarioNome == User.Identity.Name);
-            IEnumerable<Usuario> logados = db.Usuarios.Where(x=> (DateTime.Now - x.Logado).Minutes < 1);
+            IEnumerable<Usuario> logados = db.Usuarios.Where(x=> DateTime.Now.Minute - x.Logado.Minute < 1);
             object json = logados.Select(x => new Logados(x.UsuarioNome));
             return Json(json,JsonRequestBehavior.AllowGet);
         }
