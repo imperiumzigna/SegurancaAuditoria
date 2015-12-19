@@ -5,6 +5,7 @@ var selected;
 var recebeMensagens = function () {
     $.get("ChatApi/Receive", function (resultado) {
         debug = resultado;
+        console.log(resultado);
         if (resultado.length > 0) {
             for (var i = 0; i < resultado.length; i++) {
 
@@ -23,6 +24,21 @@ var recebeMensagens = function () {
 
 };
 
+var mostraLogados = function () {
+  $.get("ChatApi/Logados", function (resultado) {
+        for (var i = 0; i < resultado.length; i++) {
+            $("#logados").append("<div id="+ resultado[i].Nome +" class="+"card-panel center-align" +">"+ resultado[i].Nome+ "</div>")
+            $("#"+resultado[i].Nome).css("background-color", getRandomColor());
+        }
+        
+    });
+  
+}
+
+$(".collection-item").click(function () {
+alert("funciona")
+
+})
 
 $("#enviar_btn").click(function(){
     $.post('/ChatApi/Send',"conv="+ "igor" +"&"+"mensagem="+ $("#conteudo").val()
@@ -34,18 +50,21 @@ $("#enviar_btn").click(function(){
 })
     
 
-//Fazer requisição à cada 1 segundo
-//setInterval(ajax, 1000);
-
- 
-// Falta receber o nome do usuário a que se deseja enviar a mensagem 
-
-
 
     
 // Teste de busca pelo nome do usuário 
 $(document).ready(function () {
     recebeMensagens();
+    mostraLogados();
+    //setInterval(receberMensagens, 1000);
 }
 );
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
