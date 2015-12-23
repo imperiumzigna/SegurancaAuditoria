@@ -113,6 +113,17 @@ text-align: center;
 background-color: #f1f8e9;
 }
 
+#inputConversa {
+   height: 50px;
+    width: 284px;
+    margin-top: 220px;
+    border-left-width: 10px;
+    border: 1px solid #ECDADA;
+	margin-left:5px;
+	background-color: white;
+   float: left;
+}
+
 #conteudo{
 	border: 1px solid #ECDADA;
 	width: 500px;
@@ -127,7 +138,12 @@ button {
 
     }
 
-
+.card-panel {
+    width:295px;
+    margin-top:0px;
+    margin-bottom:0px;
+    border:0px;
+}
 
 
 

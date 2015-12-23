@@ -1,11 +1,9 @@
 ﻿// Carrega as Mensagens da Base e mostra na tela.
-var debug;
-var selected;
 
 var recebeMensagens = function () {
     $.get("ChatApi/Receive", function (resultado) {
         debug = resultado;
-        console.log(resultado);
+        
         if (resultado.length > 0) {
             for (var i = 0; i < resultado.length; i++) {
 
@@ -24,10 +22,14 @@ var recebeMensagens = function () {
 
 };
 
+
+
+
+
 var mostraLogados = function () {
   $.get("ChatApi/Logados", function (resultado) {
         for (var i = 0; i < resultado.length; i++) {
-            $("#logados").append("<div id="+ resultado[i].Nome +" class="+"card-panel center-align" +">"+ resultado[i].Nome+ "</div>")
+            $("#logados").append("<button id="+ resultado[i].Nome +" class="+" card-panel center-align" +" value="+resultado[i].Nome+">"+ resultado[i].Nome+ "</button>")
             $("#"+resultado[i].Nome).css("background-color", getRandomColor());
         }
         
@@ -35,18 +37,13 @@ var mostraLogados = function () {
   
 }
 
-$(".collection-item").click(function () {
-alert("funciona")
-
-})
-
 $("#enviar_btn").click(function(){
-    $.post('/ChatApi/Send',"conv="+ "igor" +"&"+"mensagem="+ $("#conteudo").val()
+    $.post('/ChatApi/Send',"conv="+ $("#inputConversa").val() +"&"+"mensagem="+ $("#conteudo").val()
         
     );
 
     recebeMensagens();
-    console.log($("#conteudo").val());
+    
 })
     
 
@@ -56,7 +53,9 @@ $("#enviar_btn").click(function(){
 $(document).ready(function () {
     recebeMensagens();
     mostraLogados();
-    //setInterval(receberMensagens, 1000);
+    
+   setInterval(recebeMensagens, 1000);
+    
 }
 );
 
